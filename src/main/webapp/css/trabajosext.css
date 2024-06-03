@@ -1,0 +1,145 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	background-color: #f2f2f2;
+}
+
+header {
+	padding: 3vw;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+}
+
+#logocaja {
+	margin-right: auto;
+}
+
+#logocaja img {
+	width: 120px;
+}
+
+header ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+header ul li {
+	margin-right: 5vw;
+}
+
+header ul li:last-child {
+	margin-right: 0;
+}
+
+header ul li a {
+	color: #333;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+header ul img {
+	width: 50px;
+	height: 50px;
+}
+
+h1 {
+	text-align: center;
+	background-color: #333;
+	color: #f2f2f2;
+	margin: 0;
+	padding: 0vw;
+	box-sizing: border-box;
+}
+
+main {
+	margin: 0 auto;
+	max-width: 1100px;
+}
+
+#lavadero {
+	margin: 10px;
+	width: 1200px;
+	height: 400px;
+	background-color: rgb(165, 165, 165);
+	display: flex;
+}
+
+.cajaColumna {
+	display: flex;
+	flex-direction: column;
+}
+
+#img1 img {
+	display: block;
+	width: 270px;
+	height: 200px;
+}
+
+#img2 img {
+	width: 270px;
+	height: 200px;
+}
+
+#img3 img {
+	width: 250px;
+	height: 400px;
+}
+
+.textoLavadero, p, h2 {
+	margin-left: 20px;
+	width: 600px;
+}
+
+.grua {
+	margin: 10px;
+	width: 1200px;
+	height: 400px;
+	background-color: rgb(165, 165, 165);
+	display: flex;
+}
+
+.cajaColumna {
+	display: flex;
+	flex-direction: column;
+}
+
+.img4 img {
+	display: block;
+	width: 270px;
+	height: 200px;
+}
+
+.img5 img {
+	width: 270px;
+	height: 200px;
+}
+
+.img6 img {
+	width: 250px;
+	height: 400px;
+}
+
+.textoLavadero, p, h2 {
+	margin-left: 20px;
+	width: 600px;
+}
+
+.textogrua, p, h2, h3 {
+	margin-left: 20px;
+	width: 600px;
+}
+
+.grua4 img {
+	width: 640px;
+	height: 140px;
+}
+
+.barra {
+	padding: 2vw;
+	background-color: #333;
+}

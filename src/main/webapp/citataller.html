@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cita Taller</title>
+<link rel="stylesheet" href="css/citataller.css">
+</head>
+<body>
+	<header>
+		<div id="logocaja">
+			<img src="images/logo.png" title="Logo" alt="Logo">
+		</div>
+		<ul>
+			<li><a href="index.html">INICIO</a></li>
+			<li><a href="citataller.html">CITA TALLER</a></li>
+			<li><a href="marcas.html">MARCAS</a></li>
+			<li><a href="trabajosext.html">TRABAJOS EXTERNOS</a></li>
+			<li><a href="ofertas.html">OFERTAS</a></li>
+			<li><a href="iniciarsesion.html"><img src="images/programador (1).png" alt="cuenta"></a></li>
+		</ul>
+	</header>
+
+	<h1>Descubre los beneficios de un taller de confianza</h1>
+	<br>
+	<main>
+		<div class="container">
+			<div class="pedirCita">
+				<form class="form" method="post" id="citaForm">
+					<p class="title">Pedir cita</p>
+					<div>Introduzca los datos requeridos:</div>
+					<br> <br>
+
+					<div class="inputContainer">
+						<input type="text" id="nombre" name="nombre" class="input"
+							required> <label for="nombre" class="label">Nombre</label>
+					</div>
+
+					<div class="inputContainer">
+						<input type="text" id="email" name="email" class="input" required>
+						<label for="email" class="label">Email</label>
+					</div>
+
+					<div class="inputContainer">
+						<input type="text" id="marca" name="marca" class="input" required>
+						<label for="marca" class="label">Marca</label>
+					</div>
+
+					<div class="inputContainer">
+						<input type="text" id="modelo" name="modelo" class="input"
+							required> <label for="modelo" class="label">Modelo</label>
+					</div>
+
+					<div class="inputContainer">
+						<input type="text" id="matricula" name="matricula" class="input"
+							required> <label for="matricula" class="label">Matrícula</label>
+					</div>
+
+					<div class="inputContainer">
+						<input type="date" id="fecha" name="fecha" class="input" required>
+						<label for="fecha" class="label">Fecha</label>
+					</div>
+
+
+					<input onclick="insertarCita()" class="submitBtn" value="Enviar">
+				</form>
+			</div>
+			<aside>
+				<div id="coches">
+					<img src="images/cita taller/chi-xiang-QIeJeacWug8-unsplash.jpg"
+						alt="taller"> <img
+						src="images/cita taller/photo-1632231411322-b6d2693032ec.avif"
+						alt="">
+				</div>
+			</aside>
+		</div>
+	</main>
+
+
+	<footer>
+		<div class="barra"></div>
+	</footer>
+
+	<script>
+function llamada(url){
+    fetch(url)
+    .then(res => res.json())
+    .then(res => pintarResultados(res));
+  }
+
+ 
+  
+  function insertarCita(){
+	  
+	  
+	  var xhr = new XMLHttpRequest();
+
+	    
+	    var fullUrl = "GestionCitas?";
+
+	    const nombre = document.getElementById("nombre").value;
+	    const email = document.getElementById("email").value;
+	    const marca = document.getElementById("marca").value;
+	    const modelo = document.getElementById("modelo").value;
+	    const matricula = document.getElementById("matricula").value;
+	    const fecha = document.getElementById("fecha").value;
+
+	    const url = `GestionCitas?nombre=${encodeURIComponent(nombre)}&email=${encodeURIComponent(email)}&marca=${encodeURIComponent(marca)}&modelo=${encodeURIComponent(modelo)}&matricula=${encodeURIComponent(matricula)}&fecha=${encodeURIComponent(fecha)}`;
+	    
+	    
+	    fetch(url, {
+	        method: "POST"
+	    })
+	    .then(response => {
+	        if (!response.ok) {
+	            throw new Error('Error en la solicitud');
+	        }
+	        
+	        return response.text();  
+	    })
+	    .then(() => {
+	       
+	        
+	        alert("Se ha registrado su cita correctamente")
+	        alert("En breve se pondra en contacto con usted el receptor de taller para confirmar la cita, Gracias.")
+	        window.location.replace("citataller.html");
+	    })
+	    .catch(error => {
+	        console.error('Error al editar la cita:', error);
+	    });
+  }
+
+</script>
+
+
+</body>
+</html>

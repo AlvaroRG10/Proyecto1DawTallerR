@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Listado de Citas de Taller</title>
+<link rel="stylesheet" href="css/listadocitas.css">
+<script>
+
+  function llamada(url){
+    fetch(url)
+    .then(res => res.json())
+    .then(res => pintarResultados(res));
+  }
+
+  
+  function pintarResultados(datos){
+    
+	  let html = "<table class='table'>";
+	  
+	  html += "<thead><tr><th>Nombre</th><th>Email</th><th>Marca</th><th>Modelo</th><th>Matrícula</th><th>Fecha</th><th></th><th></th></tr></thead><tbody>";
+    
+	  for(let i=0; i<datos.length; i++){
+    
+	  	html +="<tr><td>"+datos[i].nombre+"</td>";
+	  	html +="<td>"+datos[i].email+"</td>";
+		html += "<td>"+datos[i].marca+"</td>";
+		html += "<td>"+datos[i].modelo+"</td>";
+		html += "<td>"+datos[i].matricula+"</td>";			
+		html += "<td>"+datos[i].fecha+"</td>";					
+		html += "<td><a href='editarCita.html?id=" + datos[i].idcita +  "&op=1'>";
+		html += "<img src='images/editdocument_105148 (2).png' alt='Editar' />";
+		html += "</a></td>";
+		html += "<td><a href='javascript:borrarajax("+datos[i].idcita+")'>";
+		html += "<img src='images/biggarbagebin_121980.png' alt='Borrar' />";
+		html += "</a></td>";
+		html +="</tr>";
+	  
+	      }
+	  
+	  html += "</tbody></table>";
+    
+    document.getElementById("resultados").innerHTML = html;
+  }
+
+  window.onload = function(){
+    llamada("Listar?op=0");
+ 
+ }
+  
+  function borrarajax(id){
+	  
+	  var xhr = new XMLHttpRequest();
+
+	    // Construir la URL con los parámetros
+	    var fullUrl = "GestionCitas" + '?id=' + encodeURIComponent(id) + '&op=2';
+
+	    // Configurar la solicitud
+	    xhr.open('GET', fullUrl, true);
+
+	    // Establecer una función de devolución de llamada que se llamará cuando la solicitud cambie de estado
+	    xhr.onreadystatechange = function() {
+	        // Verificar si la solicitud está completa (estado 4)
+	        if (xhr.readyState === 4) {
+	            // Verificar si la solicitud fue exitosa (estado 200)
+	            if (xhr.status === 200) {
+	                // Manejar la respuesta
+	                console.log('Respuesta recibida:', xhr.responseText);
+	                
+	                llamada("Listar?op=0");
+	                
+	            } else {
+	                // Manejar el error
+	                console.error('Error en la solicitud:', xhr.status, xhr.statusText);
+	            }
+	        }
+	    };
+
+	    // Enviar la solicitud
+	    xhr.send();
+  }
+
+</script>
+</head>
+<body>
+	<header>
+		<div id="logocaja">
+			<img src="images/logo.png" title="Logo" alt="Logo">
+		</div>
+		<ul>
+			<li><a href="index.html">INICIO</a></li>
+			<li><a href="citataller.html">CITA TALLER</a></li>
+			<li><a href="marcas.html">MARCAS</a></li>
+			<li><a href="trabajosext.html">TRABAJOS EXTERNOS</a></li>
+			<li><a href="ofertas.html">OFERTAS</a></li>
+			<li><a href="iniciarsesion.html"><img src="images/programador (1).png" alt="cuenta"></a></li>
+		</ul>
+	</header>
+
+
+	<h1>LISTA DE CITAS DE TALLER</h1>
+
+	<div id="resultados" class="table-container">
+		<!-- Los resultados se mostrarán aquí -->
+	</div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	background-color: #f2f2f2;
+}
+
+header {
+	padding: 3vw;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+}
+
+#logocaja {
+	margin-right: auto;
+}
+
+#logocaja img {
+	width: 120px;
+}
+
+header ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+header ul li {
+	margin-right: 5vw;
+}
+
+header ul li:last-child {
+	margin-right: 0;
+}
+
+header ul li a {
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+header ul img {
+	width: 50px;
+	height: 50px;
+}
+
+.barra {
+	padding: 2vw;
+	background-color: #333;
+}
+
+h1 {
+	text-align: center;
+	background-color: #333;
+	color: #f2f2f2;
+	margin: 0;
+}
+
+.cajapadre {
+	margin: 5px;
+	padding: 5px;
+	width: auto;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#caja1 img {
+	max-width: 100%;
+	width: 540px;
+	height: auto;
+	border: 1px solid black;
+}
+
+#caja2 img {
+	width: 628px;
+	max-width: 100%;
+	height: auto;
+	border: 1px solid black;
+}
+
+#caja3 img {
+	width: 540px;
+	max-width: 100%;
+	height: auto;
+	border: 1px solid black;
+}
+
+#caja4 img {
+	width: 530px;
+	max-width: 100%;
+	height: auto;
+	border: 1px solid black;
+}
+
+#caja5 img {
+	width: 540px;
+	max-width: 100%;
+	height: auto;
+	border: 1px solid black;
+}
+
+#caja6 img {
+	width: 540px;
+	max-width: 100%;
+	height: auto;
+	border: 1px solid black;
+}

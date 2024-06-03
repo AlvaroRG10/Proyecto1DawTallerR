@@ -1,0 +1,95 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	background-color: #f2f2f2;
+}
+
+header {
+	padding: 3vw;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+}
+
+#logocaja {
+	margin-right: auto;
+}
+
+#logocaja img {
+	width: 120px;
+}
+
+header ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+header ul li {
+	margin-right: 5vw;
+}
+
+header ul li:last-child {
+	margin-right: 0;
+}
+
+header ul li a {
+	color: #333;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+header ul img {
+	width: 50px;
+	height: 50px;
+}
+
+h1 {
+	text-align: center;
+	background-color: #333;
+	color: #f2f2f2;
+	padding: 0vw;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.populares {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+}
+
+.populares img {
+	width: 100px;
+	height: 100px;
+	margin: 0px;
+}
+
+.populares a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-decoration: none;
+}
+
+.marcas-container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.marcas-container img {
+	width: 5vw;
+	height: auto;
+	margin: 2vw;
+}
+
+.barra {
+	padding: 2vw;
+	background-color: #333;
+}

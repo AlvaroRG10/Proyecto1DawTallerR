@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="css/iniciarsesion.css">
+</head>
+<body>
+	<header>
+		<div id="logocaja">
+			<img src="images/logo.png" title="Logo" alt="Logo">
+		</div>
+		<ul>
+			<li><a href="index.html">INICIO</a></li>
+			<li><a href="citataller.html">CITA TALLER</a></li>
+			<li><a href="marcas.html">MARCAS</a></li>
+			<li><a href="trabajosext.html">TRABAJOS EXTERNOS</a></li>
+			<li><a href="ofertas.html">OFERTAS</a></li>
+			<li><a href="iniciarsesion.html"><img src="images/programador (1).png" alt="cuenta"></a></li>
+
+		</ul>
+	</header>
+
+	<h1>TALLER REDONDO</h1>
+
+	<br>
+
+	<div class="IniciaS">
+		<form action="LoginControlador" class="form" method="post">
+			<p class="title">Inicia sesión</p>
+			<div>Introduzca una dirección de correo electrónico:</div>
+			<br> <br>
+
+			<div class="inputContainer">
+				<input type="email" class="input" name=email placeholder="a"> <label
+					for="" class="label">Email</label>
+			</div>
+
+			<div class="inputContainer">
+				<input type="password" class="input" name=contrasena placeholder="a"> <label
+					for="" class="label">Contraseña</label>
+			</div>
+
+			<p>¿Aún no tienes cuenta ?</p>
+			<br> <a href="registrarse.html">Registrate</a> <input
+				type="submit" class="submitBtn" value="Enviar">
+		</form>
+	</div>
+
+
+</body>
+</html>
